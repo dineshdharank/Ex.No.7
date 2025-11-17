@@ -1,11 +1,15 @@
 # Exno.7-Develop a prompt-based application tailored to their personal needs, fostering creativity and practical problem-solving skills while leveraging the capabilities of large language models.
 
-# Date:
-# Register no.
-# Aim: To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
+# Date: 17.11.2025
+# Register no: 212223050013
+# Aim: 
+To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
 
-#AI Tools Required: 
+## Objective
 
+To understand how LLMs interact with user prompts.
+To build a simple application that processes user input and generates meaningful output.
+To explore customization of prompts for personal or real-world use cases.
 
 # Explanation: 
 Prompt:
@@ -30,6 +34,53 @@ o Notify user of overlapping appointments or free time slots.
 o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
 o Adapt suggestions based on past user preferences and responses.
 
+## Concept
+
+A prompt-based application takes natural language input from the user, sends it to an AI model (like GPT), and returns a useful response.
+This encourages:
+Creative thinking
+Logical problem solving
+Personal customization (education, productivity, lifestyle, etc.)
+
+## Example Application: Personal Task Assistant
+How it works
+User enters a prompt such as
+“Create my study plan for tomorrow.”
+The application sends this to the LLM.
+The model generates a clear, personalized output.
+The user can refine the prompt to get better results.
+
+## Technology Used
+Python / Java / JavaScript (any preferred language)
+API access to an LLM (OpenAI, Gemini, etc.)
+Basic UI (web / console / mobile optional)
+
+## Sample Code (Python – simple console app)
+```
+import openai
+
+openai.api_key = "YOUR_API_KEY"
+
+while True:
+    user_prompt = input("Enter your request: ")
+
+    if user_prompt.lower() in ["exit", "quit"]:
+        break
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": user_prompt}]
+    )
+
+    print("AI:", response.choices[0].message["content"])
+```
+## Output Example
+
+Input:
+“Generate a weekly workout plan for me.”
+
+Output:
+A structured workout plan with daily exercises.
 
 
 # Result: 
